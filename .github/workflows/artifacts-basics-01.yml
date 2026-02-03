@@ -10,7 +10,7 @@ jobs:
       - name: Create the file
         run: echo "Hi!" > hi.txt
       - name: Upload the file
-        uses: actions/upload-artifact@6.0.0
+        uses: actions/upload-artifact@v4
         with:
           name: hi-artifact
           path: hi.txt
