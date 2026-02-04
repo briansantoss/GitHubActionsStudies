@@ -22,4 +22,4 @@ jobs:
         with:
           name: hi-artifact
       - name: Show the artifact content
-        run: cat hi-artifact.txt
+        run: cat hi.txt
