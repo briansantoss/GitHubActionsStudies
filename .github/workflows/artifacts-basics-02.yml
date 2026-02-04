@@ -21,6 +21,5 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: hi-artifact
-          path: hi-artifact.txt
       - name: Show the artifact content
         run: cat hi-artifact.txt
