@@ -1,0 +1,26 @@
+name: Download 'hi' artifact
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create the file
+        run: echo "Hi! You should see this content very soon." > hi.txt
+      - name: Upload the file
+        uses: actions/upload-artifact@v4
+        with:
+          name: hi-artifact
+          path: hi.txt
+  download:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download hi-artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: hi-artifact
+          path: hi-artifact.txt
+      - name: Show the artifact content
+        run: cat hi-artifact.txt
