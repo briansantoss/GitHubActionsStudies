@@ -6,6 +6,7 @@ inputs:
     required: true
     default: John Doe
     type: string
+    description: Person to greet
 
 runs:
   using: composite
