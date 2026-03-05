@@ -1,0 +1,14 @@
+name: Greet action
+description: Greets someone
+
+inputs:
+  name:
+    required: true
+    default: John Doe
+    type: string
+
+runs:
+  using: composite
+  steps:
+    - run: echo ${{inputs.name}}
+      shell: bash
