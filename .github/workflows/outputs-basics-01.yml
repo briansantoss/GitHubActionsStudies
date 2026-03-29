@@ -1,3 +1,4 @@
+name: Outputs basics (#1)
 on:
     workflow_dispatch:
 
@@ -5,7 +6,7 @@ jobs:
     grab-major:
         runs-on: ubuntu-latest
         outputs:
-            major: ${{steps.grab_major.major}}
+            major: ${{steps.grab_major.outputs.major}}
         steps:
             - run: echo "1.2.0" >> version.txt
             - id: grab_major
